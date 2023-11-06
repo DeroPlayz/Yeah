@@ -1,4 +1,4 @@
-package Yeah;
+package src;
 
 import java.util.Scanner;
 

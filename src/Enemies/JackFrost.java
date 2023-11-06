@@ -1,19 +1,19 @@
-package Yeah.Enemies;
+package src.Enemies;
 
 public class JackFrost extends Enemy {
 
     public JackFrost() {
         Name = "Jack Frost";
         Arcana = "Magician";
-        Level = 3;
-        MaxHP = 17;
+        Level = 11;
+        MaxHP = 214;
         HP = MaxHP;
-        MaxSP = 14;
+        MaxSP = 129;
         SP = MaxSP;
-        Attack = 1;
-        Magic = 3;
-        Defense = 5;
-        Agility = 4;
+        Attack = 12;
+        Magic = 22;
+        Defense = 11;
+        Agility = 13;
     }
     
 }

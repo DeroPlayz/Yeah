@@ -1,4 +1,4 @@
-package Yeah.Enemies;
+package src.Enemies;
 
 /**
 The superclass used to define enemies in the game.

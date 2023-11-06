@@ -1,24 +1,14 @@
-package Yeah;
+package src;
 
-import static Yeah.SaveSystem.saveGame;
-import static Yeah.SaveSystem.loadGame;
+import static src.SaveSystem.saveGame;
+import static src.SaveSystem.loadGame;
 
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.MouseInfo;
-import java.awt.Point;
+//import java.awt.FlowLayout;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.concurrent.Flow;
-
 import javax.swing.*;
-import java.awt.event.*;
-import org.w3c.dom.events.MouseEvent;
 
-import Yeah.Enemies.*;
+import src.Enemies.Enemy;
 
 public class Main {
     static JFrame window = new JFrame("Shin Megami Tensei: Derail");
@@ -58,33 +48,20 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        window.setVisible(true);
-        window.setSize(1920, 1080);
-        window.setLayout(new FlowLayout());
-        window.add(buttonA);
-        window.add(buttonB);
-        window.add(buttonC);
+        // window.setVisible(true);
+        // window.setSize(1920, 1080);
+        // window.setLayout(new FlowLayout());
+        // window.add(buttonA);
+        // window.add(buttonB);
+        // window.add(buttonC);
         
-        buttonA.setBounds(31, 100, 40);
-        buttonB.setBounds(700, 431, 100, 40);
-        buttonC.setBounds(700, 531, 100, 40);
+        // buttonA.setVisible(true);
+        // buttonB.setVisible(true);
+        // buttonC.setVisible(true);
         
-        buttonA.setVisible(true);
-        buttonB.setVisible(true);
-        buttonC.setVisible(true);
-        
-        //loadSave(MafLib.askString("Would you like to load your save, or start a new one? (l/n)", true));
-        //saveGame();
-        
-        while(true){
-            Point location = MouseInfo.getPointerInfo().getLocation();
-            int x = (int) location.getX();
-            int y = (int) location.getY();
-            buttonA.setText("X: " + x);
-            buttonB.setText("Y: " + y);
-        }
-
-        
+        loadSave(MafLib.askString("Would you like to load your save, or start a new one? (l/n)", true));
+        saveGame(); 
+        System.out.println(player);
     }
     
     // public static void setEnemyParty(Enemy Enemy){
