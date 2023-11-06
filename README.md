@@ -1,7 +1,7 @@
 # Welcome to an unfinished game!
 
 ## Player Data
-As a player, you will have various values. By the way, if you thought this was a manual, this is your warning that this is just me talking about the program itself.
+As a player, you will have various values. By the way, this is gonna be a manual and me just talking about the development sorta.
 
 ### Name
 The name of your character. Fairly self explanatory.
