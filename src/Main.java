@@ -11,10 +11,10 @@ import javax.swing.*;
 import src.Enemies.Enemy;
 
 public class Main {
-    static JFrame window = new JFrame("Shin Megami Tensei: Derail");
-    static JButton buttonA = new JButton("New Save");
-    static JButton buttonB = new JButton("Load Save");
-    static JButton buttonC = new JButton("Exit Game");
+    // static JFrame window = new JFrame("Shin Megami Tensei: Derail");
+    // static JButton buttonA = new JButton("New Save");
+    // static JButton buttonB = new JButton("Load Save");
+    // static JButton buttonC = new JButton("Exit Game");
 
     static Player player;
     static Enemy eOne;
