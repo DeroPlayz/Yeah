@@ -4,17 +4,8 @@ import static src.SaveSystem.saveGame;
 import static src.SaveSystem.loadGame;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import src.Elements.Skills.Skill;
-import static src.Elements.Skills.Skill.Ally;
-import static src.Elements.Skills.Skill.Enemy;
-import static src.Elements.ElemList.Physical;
-import static src.Elements.ElemList.Fire;
-import static src.Elements.ElemList.Ice;
-import static src.Elements.ElemList.Electric;
-import static src.Elements.ElemList.Wind;
-import static src.Elements.ElemList.Light;
-import static src.Elements.ElemList.Dark;
 import src.Enemies.Enemy;
+import static src.Elements.Skills.Skill.Skills;
 
 public class Main {
     static Player player;
