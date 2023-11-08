@@ -1,9 +1,16 @@
 package src.Elements.Skills;
 
-import javax.lang.model.util.Elements;
-
 import src.Elements.Element;
 
 public class Skill {
-    Element element = Fire
+    public static Element Element;
+    public static double Single;
+    public static double All;
+    public static double Random;
+    public static int Allies;
+    public static int Enemies;
+
+    public Skill(Element Element, int HitType){
+        Skill.Element = Element;
+    }
 }

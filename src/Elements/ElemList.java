@@ -1,11 +1,11 @@
 package src.Elements;
 
 public class ElemList{
-    Element Physical = new Element("Physical");
-    Element Fire = new Element("Fire");
-    Element Ice = new Element("Ice");
-    Element Electric = new Element("Electric");
-    Element Wind = new Element("Wind");
-    Element Light = new Element("Light");
-    Element Dark = new Element("Dark");
+    public static Element Physical = new Element();
+    public static Element Fire = new Element();
+    public static Element Ice = new Element();
+    public static Element Electric = new Element();
+    public static Element Wind = new Element();
+    public static Element Light = new Element();
+    public static Element Dark = new Element();
 }

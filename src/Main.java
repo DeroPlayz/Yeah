@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 // import javax.swing.*;
 
+import src.Elements.Skills.Skill;
 import src.Enemies.Enemy;
 
 public class Main {
@@ -59,6 +60,7 @@ public class Main {
         // buttonB.setVisible(true);
         // buttonC.setVisible(true);
         
+        Skill Agi = new Skill(Fire);
         loadSave(MafLib.askString("Would you like to load your save, or start a new one? (l/n)", true));
         saveGame(); 
         System.out.println(player);
