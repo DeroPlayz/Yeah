@@ -63,6 +63,9 @@ public class Skill {
         return Targets;
     }
 
+    //Physical Skills
+    public static Skill Bash = new Skill("Placeholder so java doesn't remind me about the unused phys import", Physical, Weak, Single);
+
     //Fire Skills
     public static Skill Agi;
     public static Skill Agilao;
