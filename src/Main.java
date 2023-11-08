@@ -5,7 +5,6 @@ import static src.SaveSystem.loadGame;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import src.Enemies.Enemy;
-import static src.Elements.Skills.Skill.Skills;
 
 public class Main {
     static Player player;

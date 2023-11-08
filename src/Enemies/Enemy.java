@@ -1,10 +1,15 @@
 package src.Enemies;
 
+import java.util.ArrayList;
+
+import src.Elements.Skill;
+
 /**
 The superclass used to define enemies in the game.
 */
 
 public abstract class Enemy {
+    //Data
     public static String Name;
     public static String Arcana;
     public static double Level;
@@ -17,6 +22,8 @@ public abstract class Enemy {
     public static int Defense;
     public static int Agility;
     public static double[] Affinities = new double[7];
+    public static ArrayList<Skill> skillPool;
+
     //Resistances
     public static double weak = 1.5; //Weak
     public static double normal = 1.0; //No affinity

@@ -1,5 +1,7 @@
 package src.Enemies;
 
+
+
 public class JackFrost extends Enemy {
 
     public JackFrost() {
@@ -14,6 +16,7 @@ public class JackFrost extends Enemy {
         Magic = 22;
         Defense = 11;
         Agility = 13;
+        skillPool.add(Bufu);
     }
     
 }
