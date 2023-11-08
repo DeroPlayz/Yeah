@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 
 import src.Elements.Skills.Skill;
 import src.Enemies.Enemy;
+import src.Skills.Skill.Ally;
 
 public class Main {
     // static JFrame window = new JFrame("Shin Megami Tensei: Derail");
@@ -60,7 +61,7 @@ public class Main {
         // buttonB.setVisible(true);
         // buttonC.setVisible(true);
         
-        Skill Agi = new Skill(Fire);
+        Skill Agi = new Skill(Fire, Enemy);
         loadSave(MafLib.askString("Would you like to load your save, or start a new one? (l/n)", true));
         saveGame(); 
         System.out.println(player);

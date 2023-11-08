@@ -7,8 +7,8 @@ public class Skill {
     public static double Single;
     public static double All;
     public static double Random;
-    public static int Allies;
-    public static int Enemies;
+    public static int Ally;
+    public static int Enemy;
 
     public Skill(Element Element, int HitType){
         Skill.Element = Element;
