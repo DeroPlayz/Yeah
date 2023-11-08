@@ -2,22 +2,21 @@ package src;
 
 import static src.SaveSystem.saveGame;
 import static src.SaveSystem.loadGame;
-
-//import java.awt.FlowLayout;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-// import javax.swing.*;
-
 import src.Elements.Skills.Skill;
+import static src.Elements.Skills.Skill.Ally;
+import static src.Elements.Skills.Skill.Enemy;
+import static src.Elements.ElemList.Physical;
+import static src.Elements.ElemList.Fire;
+import static src.Elements.ElemList.Ice;
+import static src.Elements.ElemList.Electric;
+import static src.Elements.ElemList.Wind;
+import static src.Elements.ElemList.Light;
+import static src.Elements.ElemList.Dark;
 import src.Enemies.Enemy;
-import src.Skills.Skill.Ally;
 
 public class Main {
-    // static JFrame window = new JFrame("Shin Megami Tensei: Derail");
-    // static JButton buttonA = new JButton("New Save");
-    // static JButton buttonB = new JButton("Load Save");
-    // static JButton buttonC = new JButton("Exit Game");
-
     static Player player;
     static Enemy eOne;
     static Enemy eTwo;
@@ -61,7 +60,6 @@ public class Main {
         // buttonB.setVisible(true);
         // buttonC.setVisible(true);
         
-        Skill Agi = new Skill(Fire, Enemy);
         loadSave(MafLib.askString("Would you like to load your save, or start a new one? (l/n)", true));
         saveGame(); 
         System.out.println(player);
