@@ -20,22 +20,22 @@ import src.Elements.Skill;
     */
 public abstract class Enemy extends Actor {
     //Data
-    public String Name;
+    // public String Name;
     public Arcana Arcana;
-    public double Level;
-    public int MaxHP;
-    public int HP;
-    public int MaxSP;
-    public int SP;
-    public int Attack;
-    public int Magic;
-    public int Defense;
-    public int Agility;
-    public double[] Affinities = new double[6];
+    // public double Level;
+    // public int MaxHP;
+    // public int HP;
+    // public int MaxSP;
+    // public int SP;
+    // public int Attack;
+    // public int Magic;
+    // public int Defense;
+    // public int Agility;
+    // public double[] Affinities = new double[6];
     public ArrayList<Skill> skillPool;
     public AI AI;
 
-    
+
     //Resistances
     public final static double weak = 1.5; //Weak
     public final static double normal = 1.0; //No affinity

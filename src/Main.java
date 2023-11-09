@@ -6,7 +6,6 @@ import static src.SaveSystem.saveGame;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import src.Actor.Actor;
 import src.Actor.Player;
 import src.Actor.Enemies.Enemy;
 import src.Actor.Enemies.JackFrost;
