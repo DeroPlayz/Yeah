@@ -5,7 +5,7 @@ import java.io.Serializable;
 import src.Actor.Enemies.Enemy;
 import src.Elements.Skill;
 
-public class Player extends Actor implements Serializable{
+public class Player implements Serializable{
     public String Name = "Dummy";
     public String Subject = "They";
     public String Object = "They";

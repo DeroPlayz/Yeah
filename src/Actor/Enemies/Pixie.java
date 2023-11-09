@@ -14,6 +14,6 @@ public class Pixie extends Enemy {
         Magic = 3;
         Defense = 3;
         Agility = 4;
-        setAffinities(normal, weak, resist, resist, normal, resist, weak);
+        setAffinities(weak, resist, resist, normal, resist, weak);
     }    
 }

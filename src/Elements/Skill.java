@@ -2,7 +2,6 @@ package src.Elements;
 
 import static src.Elements.ElemList.*;
 
-import src.Actor.Actor;
 import src.Actor.Enemies.Enemy;
 import src.Actor.Player;
 

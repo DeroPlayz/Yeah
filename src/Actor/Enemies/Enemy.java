@@ -2,7 +2,6 @@ package src.Actor.Enemies;
 
 import java.util.ArrayList;
 
-import src.Actor.Actor;
 import src.Elements.Skill;
 
 /**
@@ -18,23 +17,26 @@ import src.Elements.Skill;
     @param Defense - How much damage the demon takes.
     @param Agility - Dictates the move priority and hit/dodge rate.
     */
-public abstract class Enemy extends Actor {
+public class Enemy{
     //Data
-    // public String Name;
+    public String Name;
     public Arcana Arcana;
-    // public double Level;
-    // public int MaxHP;
-    // public int HP;
-    // public int MaxSP;
-    // public int SP;
-    // public int Attack;
-    // public int Magic;
-    // public int Defense;
-    // public int Agility;
-    // public double[] Affinities = new double[6];
+    public double Level;
+    public int MaxHP;
+    public int HP;
+    public int MaxSP;
+    public int SP;
+    public int Attack;
+    public int Magic;
+    public int Defense;
+    public int Agility;
+    public double[] Affinities = new double[6];
     public ArrayList<Skill> skillPool;
     public AI AI;
 
+    // public Enemy(String Name, Arcana Arcana, double Level, int MaxHP, int HP, int MaxSP, int SP, int Attack, int Magic, int Defense, int Agility, double[] Affinities, ArrayList<Skill> skillPool){
+
+    // }
 
     //Resistances
     public final static double weak = 1.5; //Weak
@@ -60,7 +62,6 @@ public abstract class Enemy extends Actor {
         Affinities[5] = Dark;
     }
 
-    
     public String AffinityStr(){
         String[] affs = {"Fire", "Ice", "Electric", "Wind", "Light", "Dark"};
         String s = "";
@@ -91,5 +92,42 @@ public abstract class Enemy extends Actor {
     public String toString(){
         String s = (Name + "\n" + Arcana + "\nLevel " + ((int) Level) + "\nHP: " + HP + "/" + MaxHP);
         return s;
+    }
+
+    public String Name() {
+        return Name;
+    }
+    public double Level() {
+        return Level;
+    }
+    public int MaxHP() {
+        return MaxHP;
+    }
+    public int HP() {
+        return HP;
+    }
+    public int MaxSP() {
+        return MaxSP;
+    }
+    public int SP() {
+        return SP;
+    }
+    public int Attack() {
+        return Attack;
+    }
+    public int Magic() {
+        return Magic;
+    }
+    public int Defense() {
+        return Defense;
+    }
+    public int Agility() {
+        return Agility;
+    }
+    public double[] Affinities() {
+        return Affinities;
+    }
+    public ArrayList<Skill> SkillPool() {
+        return skillPool;
     }
 }

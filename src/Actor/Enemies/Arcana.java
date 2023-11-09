@@ -9,6 +9,7 @@ public class Arcana {
 
     }
 
+    public Arcana Dummy = new Arcana("Dummy", "-1", -1);
     public Arcana Fool = new Arcana("Fool", "0", 0);
     public Arcana Magician = new Arcana("Magician", "I", 1);
     public Arcana Priestess = new Arcana("Prietess", "II", 2);
