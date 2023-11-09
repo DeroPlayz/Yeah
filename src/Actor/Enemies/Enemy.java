@@ -20,20 +20,22 @@ import src.Elements.Skill;
     */
 public abstract class Enemy extends Actor {
     //Data
-    public static String Name;
-    public static Arcana Arcana;
-    public static double Level;
-    public static int MaxHP;
-    public static int HP;
-    public static int MaxSP;
-    public static int SP;
-    public static int Attack;
-    public static int Magic;
-    public static int Defense;
-    public static int Agility;
-    public static double[] Affinities = new double[6];
-    public static ArrayList<Skill> skillPool;
-    public static AI AI;
+    public String Name;
+    public Arcana Arcana;
+    public double Level;
+    public int MaxHP;
+    public int HP;
+    public int MaxSP;
+    public int SP;
+    public int Attack;
+    public int Magic;
+    public int Defense;
+    public int Agility;
+    public double[] Affinities = new double[6];
+    public ArrayList<Skill> skillPool;
+    public AI AI;
+
+    
     //Resistances
     public final static double weak = 1.5; //Weak
     public final static double normal = 1.0; //No affinity
@@ -49,7 +51,7 @@ public abstract class Enemy extends Actor {
      * @param Light Affinity.<br>
      * @param Dark Affinity.
      */
-    public static void setAffinities(double Fire, double Ice, double Electric, double Wind, double Light, double Dark){
+    public void setAffinities(double Fire, double Ice, double Electric, double Wind, double Light, double Dark){
         Affinities[0] = Fire;
         Affinities[1] = Ice;
         Affinities[2] = Electric;
@@ -57,16 +59,8 @@ public abstract class Enemy extends Actor {
         Affinities[4] = Light;
         Affinities[5] = Dark;
     }
-    // public static String getName() {return Name;}; //public static void setName(String Name) {Enemy.Name = Name;}
-    // public static String getArcana() {return Arcana;}; //public static void setArcana(String Arcana) {Enemy.Arcana = Arcana;}
-    // public static int getHP() {return HP;}; //public static void setHP(int HP) {Enemy.HP = HP;}
-    // public static int getSP() {return SP;}; //public static void setSP(int SP) {Enemy.SP = SP;}
-    // public static int getAttack() {return Attack;}; //public static void setAttack(int Attack) {Enemy.Attack = Attack;}
-    // public static int getMagic() {return Magic;}; //public static void setMagic(int Magic) {Enemy.Magic = Magic;}
-    // public static int getDefense() {return Defense;}; //public static void setDefense(int Defense) {Enemy.Defense = Defense;}
-    // public static int getAgility() {return Agility;}; //public static void setAgility(int Agility) {Enemy.Agility = Agility;}
-    // public static int[] getAffinities() {return Affinities;}; //public static void SetAffinitiea
 
+    
     public String AffinityStr(){
         String[] affs = {"Fire", "Ice", "Electric", "Wind", "Light", "Dark"};
         String s = "";
@@ -90,12 +84,12 @@ public abstract class Enemy extends Actor {
         return s;
     }
     public String Stats(){
-        String s = ("Name: " + Enemy.Name + "\nArcana: " + Enemy.Arcana + "\nLevel: " + ((int) Enemy.Level) + "\nMax HP: " + Enemy.HP + "\nMax SP:" + Enemy.SP + "\nAttack: " + Enemy.Attack + "\nMagic: " + Enemy.Magic + "\nDefense: " + Enemy.Defense + "\nAgility: " + Enemy.Agility + "\n" + AffinityStr());
+        String s = ("Name: " + Name + "\nArcana: " + Arcana + "\nLevel: " + ((int) Level) + "\nMax HP: " + HP + "\nMax SP:" + SP + "\nAttack: " + Attack + "\nMagic: " + Magic + "\nDefense: " + Defense + "\nAgility: " + Agility + "\n" + AffinityStr());
         return s;
     }
 
     public String toString(){
-        String s = (Enemy.Name + "\n" + Enemy.Arcana + "\nLevel " + ((int) Enemy.Level) + "\nHP: " + Enemy.HP + "/" + Enemy.MaxHP);
+        String s = (Name + "\n" + Arcana + "\nLevel " + ((int) Level) + "\nHP: " + HP + "/" + MaxHP);
         return s;
     }
 }

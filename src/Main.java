@@ -1,14 +1,15 @@
 package src;
 
-import static src.SaveSystem.saveGame;
 import static src.SaveSystem.loadGame;
-import static src.Actor.Player.hit;
+import static src.SaveSystem.saveGame;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import src.Actor.Actor;
 import src.Actor.Player;
 import src.Actor.Enemies.Enemy;
+import src.Actor.Enemies.JackFrost;
 import src.Elements.Skill;
 
 public class Main {
@@ -44,21 +45,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // window.setVisible(true);
-        // window.setSize(1920, 1080);
-        // window.setLayout(new FlowLayout());
-        // window.add(buttonA);
-        // window.add(buttonB);
-        // window.add(buttonC);
-        
-        // buttonA.setVisible(true);
-        // buttonB.setVisible(true);
-        // buttonC.setVisible(true);
+        eOne = new JackFrost();
         
         loadSave(MafLib.askString("Would you like to load your save, or start a new one? (l/n)", true));
         saveGame(); 
         System.out.println(player);
-        hit(eOne, Skill.Agi);
+        player.hit(eOne, Skill.Agi);
     }
     
     // public static void setEnemyParty(Enemy Enemy){

@@ -6,23 +6,23 @@ import src.Actor.Enemies.Enemy;
 import src.Elements.Skill;
 
 public class Player extends Actor implements Serializable{
-    public /*static*/ String Name = "Dummy";
-    public /*static*/ String Subject = "They";
-    public /*static*/ String Object = "They";
-    //public /*static*/ String Arcana = "Fool";
-    public /*static*/ int Level = 1;
-    public /*static*/ int XP = 0;
-    public /*static*/ int TNL = (int) Math.pow(Level-1, (Level/5)) + 50; // XP To Next Level
-    public /*static*/ int MaxHP = 25;
-    public /*static*/ int HP = MaxHP;
-    public /*static*/ int MaxSP = 15;
-    public /*static*/ int SP = MaxSP;
-    public /*static*/ int Attack = 1;
-    public /*static*/ int Magic = 1;
-    public /*static*/ int Defense = 1;
-    public /*static*/ int Agility = 1;
-    public /*static*/ double[] Affinities = new double[7];
-    public /*static*/ int statPoints = 6;
+    public String Name = "Dummy";
+    public String Subject = "They";
+    public String Object = "They";
+    //public String Arcana = "Fool";
+    public int Level = 1;
+    public int XP = 0;
+    public int TNL = (int) Math.pow(Level-1, (Level/5)) + 50; // XP To Next Level
+    public int MaxHP = 25;
+    public int HP = MaxHP;
+    public int MaxSP = 15;
+    public int SP = MaxSP;
+    public int Attack = 1;
+    public int Magic = 1;
+    public int Defense = 1;
+    public int Agility = 1;
+    public double[] Affinities = new double[7];
+    public int statPoints = 6;
     
     public Player(){
         this.Name = "Dummy"; 
@@ -57,13 +57,16 @@ public class Player extends Actor implements Serializable{
         this.statPoints = statPoints;
     }
 
-    public static void hit(Enemy e, Skill s){
+    public void hit(Enemy e, Skill s){
         int mult = (int) Affinities[s.ID()];
         int dmg = (s.Strength() * Magic) * mult;
         if(SP > s.Cost()){
             SP -= s.Cost();
             e.HP -= dmg;
         }
+
+        System.out.println("Player Health:" + HP + "/" + MaxHP);
+        System.out.println(e.Name() + " Health: "  + e.HP + "/" + e.MaxHP);
     }
 
     public String toString(){
@@ -71,67 +74,67 @@ public class Player extends Actor implements Serializable{
         return s;
     }
 
-    public /*static*/ String getName() {
+    public String getName() {
         return Name;
     }
 
-    public /*static*/ String getSubject() {
+    public String getSubject() {
         return Subject;
     }
 
-    public /*static*/ String getObject() {
+    public String getObject() {
         return Object;
     }
 
-    public /*static*/ int getLevel() {
+    public int getLevel() {
         return Level;
     }
 
-    public /*static*/ int getXP() {
+    public int getXP() {
         return XP;
     }
 
-    public /*static*/ int getTNL() {
+    public int getTNL() {
         return TNL;
     }
 
-    public /*static*/ int getMaxHP() {
+    public int getMaxHP() {
         return MaxHP;
     }
 
-    public /*static*/ int getHP() {
+    public int getHP() {
         return HP;
     }
 
-    public /*static*/ int getMaxSP() {
+    public int getMaxSP() {
         return MaxSP;
     }
 
-    public /*static*/ int getSP() {
+    public int getSP() {
         return SP;
     }
 
-    public /*static*/ int getAttack() {
+    public int getAttack() {
         return Attack;
     }
 
-    public /*static*/ int getMagic() {
+    public int getMagic() {
         return Magic;
     }
 
-    public /*static*/ int getDefense() {
+    public int getDefense() {
         return Defense;
     }
 
-    public /*static*/ int getAgility() {
+    public int getAgility() {
         return Agility;
     }
 
-    public /*static*/ double[] getAffinities() {
+    public double[] getAffinities() {
         return Affinities;
     }
 
-    public /*static*/ int getStatPoints() {
+    public int getStatPoints() {
         return statPoints;
     }
 }
