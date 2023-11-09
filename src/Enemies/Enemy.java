@@ -1,7 +1,6 @@
 package src.Enemies;
 
 import java.util.ArrayList;
-
 import src.Elements.Skill;
 
 /**

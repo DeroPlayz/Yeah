@@ -1,9 +1,8 @@
 package src.Enemies;
 
-
+import src.Elements.Skill;
 
 public class JackFrost extends Enemy {
-
     public JackFrost() {
         Name = "Jack Frost";
         Arcana = "Magician";
@@ -16,7 +15,8 @@ public class JackFrost extends Enemy {
         Magic = 22;
         Defense = 11;
         Agility = 13;
-        skillPool.add(Bufu);
+        skillPool.set(0, Skill.Bufu);
+        skillPool.set(1, Skill.Mabufu);
     }
     
 }

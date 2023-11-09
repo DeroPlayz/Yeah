@@ -10,11 +10,11 @@ import static src.Elements.ElemList.Dark;
 
 public class Skill {
     //Actual Properties
-    public String Name;
-    public Element Element;
-    public int Strength;
-    public int HitType;
-    public int Targets;
+    private String Name;
+    private Element Element;
+    private int Strength;
+    private int HitType;
+    private int Targets;
     
     //Strength Levels
     public static final int Weak = 3;
@@ -49,8 +49,16 @@ public class Skill {
         this.Targets = Targets;
     }
 
+    public String toString(){
+        return Name;
+    }
+
     public Element Element(){
         return Element;
+    }
+
+    public int Strength(){
+        return Strength;
     }
 
     public int HitType(){
