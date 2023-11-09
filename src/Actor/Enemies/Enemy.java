@@ -20,7 +20,7 @@ import src.Elements.Skill;
 public class Enemy{
     //Data
     public String Name;
-    public Arcana Arcana;
+    public Arcana Arcana = Arcana.Dummy;
     public double Level;
     public int MaxHP;
     public int HP;
