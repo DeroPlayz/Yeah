@@ -17,6 +17,8 @@ public class JackFrost extends Enemy {
         Agility = 13;
         skillPool.set(0, Skill.Bufu);
         skillPool.set(1, Skill.Mabufu);
+        skillPool.set(2, Skill.Dia);
+        AI = Magician;
     }
     
 }

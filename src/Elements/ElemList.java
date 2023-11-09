@@ -8,4 +8,5 @@ public class ElemList{
     public static final Element Wind = new Element();
     public static final Element Light = new Element();
     public static final Element Dark = new Element();
+    public static final Element Recovery = new Element();
 }

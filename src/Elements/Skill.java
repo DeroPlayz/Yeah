@@ -1,12 +1,6 @@
 package src.Elements;
 
-import static src.Elements.ElemList.Physical;
-import static src.Elements.ElemList.Fire;
-import static src.Elements.ElemList.Ice;
-import static src.Elements.ElemList.Electric;
-import static src.Elements.ElemList.Wind;
-import static src.Elements.ElemList.Light;
-import static src.Elements.ElemList.Dark;
+import static src.Elements.ElemList.*;
 
 public class Skill {
     //Actual Properties
@@ -136,5 +130,12 @@ public class Skill {
     public static Skill Maeiga = new Skill("Maeiga", Dark, Medium, Multi);
     public static Skill Maeigaon = new Skill("Maeigaon", Dark, Heavy, Multi);
     public static Skill Maeihabarion = new Skill("Maeihabarion", Dark, Severe, Single);
-    
+
+    public static Skill Dia = new Skill("Dia", Recovery, Weak, Single);
+    public static Skill Diarama = new Skill("Diarama", Recovery, Medium, Single);
+    public static Skill Diarahan = new Skill("Diarahan", Recovery, Heavy, Single);
+
+    public static Skill Media = new Skill("Media", Recovery, Weak, Multi);
+    public static Skill Mediarama = new Skill("Mediarama", Recovery, Medium, Multi);
+    public static Skill Mediarahan = new Skill("Mediarahan", Recovery, Heavy, Multi);
 }

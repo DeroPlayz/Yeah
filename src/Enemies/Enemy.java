@@ -4,9 +4,18 @@ import java.util.ArrayList;
 import src.Elements.Skill;
 
 /**
-The superclass used to define enemies in the game.
-*/
-
+    The superclass used to define enemies in the game.
+    @param Name - The name of the demon.
+    @param Arcana - The Arcana of the demon.
+    @param MaxHP - The max damage the demon can take before dying.
+    @param HP - The current health value of the demon.
+    @param MaxSP - The max spirit point stat of the demon.
+    @param SP - The current spirit point value of the demon.
+    @param Attack - The physical attack stat for the demon.
+    @param Magic - The magical attack stat for the demon.
+    @param Defense - How much damage the demon takes.
+    @param Agility - Dictates the move priority and hit/dodge rate.
+    */
 public abstract class Enemy {
     //Data
     public static String Name;
@@ -24,11 +33,11 @@ public abstract class Enemy {
     public static ArrayList<Skill> skillPool;
 
     //Resistances
-    public static double weak = 1.5; //Weak
-    public static double normal = 1.0; //No affinity
-    public static double resist = 0.5; //Resist
-    public static double block = 0.0; //Block
-    public static double absorb = -1.0; //Absorb
+    public final static double weak = 1.5; //Weak
+    public final static double normal = 1.0; //No affinity
+    public final static double resist = 0.5; //Resist
+    public final static double block = 0.0; //Block
+    public final static double absorb = -1.0; //Absorb
 
     /**
      * @param Physical Affinity.<br>
@@ -90,17 +99,3 @@ public abstract class Enemy {
         return s;
     }
 }
-
-/**
-    The superclass used to define enemies in the game.
-    @param Name - The name of the demon.
-    @param Arcana - The Arcana of the demon. Affects summoning and reaction to certain spells.
-    @param MaxHP - The max damage the demon can take before dying.
-    @param HP - The current health value of the demon.
-    @param MaxSP - The max spirit point stat of the demon.
-    @param SP - The current spirit point value of the demon.
-    @param Attack - The physical attack stat for the demon.
-    @param Magic - The magical attack stat for the demon.
-    @param Defense - How much damage the demon takes.
-    @param Agility - Dictates the move priority and hit/dodge rate.
-    */
