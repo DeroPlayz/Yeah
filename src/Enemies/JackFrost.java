@@ -1,11 +1,12 @@
 package src.Enemies;
 
 import src.Elements.Skill;
+import src.Enemies.Arcana;
 
 public class JackFrost extends Enemy {
     public JackFrost() {
         Name = "Jack Frost";
-        Arcana = "Magician";
+        Arcana = Arcana.Magician;
         Level = 11;
         MaxHP = 214;
         HP = MaxHP;
@@ -18,7 +19,7 @@ public class JackFrost extends Enemy {
         skillPool.set(0, Skill.Bufu);
         skillPool.set(1, Skill.Mabufu);
         skillPool.set(2, Skill.Dia);
-        AI = Magician;
+        AI = AI
     }
     
 }

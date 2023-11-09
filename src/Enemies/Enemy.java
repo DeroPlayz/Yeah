@@ -19,7 +19,7 @@ import src.Elements.Skill;
 public abstract class Enemy {
     //Data
     public static String Name;
-    public static String Arcana;
+    public static Arcana Arcana;
     public static double Level;
     public static int MaxHP;
     public static int HP;
@@ -31,7 +31,7 @@ public abstract class Enemy {
     public static int Agility;
     public static double[] Affinities = new double[7];
     public static ArrayList<Skill> skillPool;
-
+    public static AI AI;
     //Resistances
     public final static double weak = 1.5; //Weak
     public final static double normal = 1.0; //No affinity

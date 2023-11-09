@@ -4,7 +4,7 @@ public class Pixie extends Enemy {
 
     public Pixie() {
         Name = "Pixie";
-        Arcana = "Lovers";
+        Arcana = Arcana.Lovers;
         Level = 2;
         MaxHP = 86;
         HP = MaxHP;
