@@ -1,7 +1,7 @@
 package src.Actor.Enemies;
 
 import java.util.ArrayList;
-
+import src.Actor.Enemies.Arcana;
 import src.Elements.Skill;
 
 /**
@@ -20,7 +20,7 @@ import src.Elements.Skill;
 public class Enemy{
     //Data
     public String Name;
-    public Arcana Arcana = Arcana.Dummy;
+    public Arcana Arcana = Magician;
     public double Level;
     public int MaxHP;
     public int HP;
