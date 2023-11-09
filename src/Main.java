@@ -2,18 +2,23 @@ package src;
 
 import static src.SaveSystem.saveGame;
 import static src.SaveSystem.loadGame;
+import static src.Actor.Player.hit;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import src.Enemies.Enemy;
+
+import src.Actor.Actor;
+import src.Actor.Player;
+import src.Actor.Enemies.Enemy;
+import src.Elements.Skill;
 
 public class Main {
     static Player player;
-    static Enemy eOne;
-    static Enemy eTwo;
-    static Enemy eThree;
-    static Enemy eFour;
-    static Enemy eFive;
-    static Enemy eSix;
+    public static Enemy eOne;
+    public static Enemy eTwo;
+    public static Enemy eThree;
+    public static Enemy eFour;
+    public static Enemy eFive;
+    public static Enemy eSix;
     
     public static void loadSave(String s){
         if(s.equals("l")){
@@ -53,6 +58,7 @@ public class Main {
         loadSave(MafLib.askString("Would you like to load your save, or start a new one? (l/n)", true));
         saveGame(); 
         System.out.println(player);
+        hit(eOne, Skill.Agi);
     }
     
     // public static void setEnemyParty(Enemy Enemy){

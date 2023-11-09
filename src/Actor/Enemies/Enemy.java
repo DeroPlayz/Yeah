@@ -1,6 +1,8 @@
-package src.Enemies;
+package src.Actor.Enemies;
 
 import java.util.ArrayList;
+
+import src.Actor.Actor;
 import src.Elements.Skill;
 
 /**
@@ -16,7 +18,7 @@ import src.Elements.Skill;
     @param Defense - How much damage the demon takes.
     @param Agility - Dictates the move priority and hit/dodge rate.
     */
-public abstract class Enemy {
+public abstract class Enemy extends Actor {
     //Data
     public static String Name;
     public static Arcana Arcana;
@@ -29,7 +31,7 @@ public abstract class Enemy {
     public static int Magic;
     public static int Defense;
     public static int Agility;
-    public static double[] Affinities = new double[7];
+    public static double[] Affinities = new double[6];
     public static ArrayList<Skill> skillPool;
     public static AI AI;
     //Resistances
@@ -40,7 +42,6 @@ public abstract class Enemy {
     public final static double absorb = -1.0; //Absorb
 
     /**
-     * @param Physical Affinity.<br>
      * @param Fire Affinity.<br>
      * @param Ice Affinity.<br>
      * @param Electric Affinity.<br>
@@ -48,14 +49,13 @@ public abstract class Enemy {
      * @param Light Affinity.<br>
      * @param Dark Affinity.
      */
-    public static void setAffinities(double Physical, double Fire, double Ice, double Electric, double Wind, double Light, double Dark){
-        Affinities[0] = Physical;
-        Affinities[1] = Fire;
-        Affinities[2] = Ice;
-        Affinities[3] = Electric;
-        Affinities[4] = Wind;
-        Affinities[5] = Light;
-        Affinities[6] = Dark;
+    public static void setAffinities(double Fire, double Ice, double Electric, double Wind, double Light, double Dark){
+        Affinities[0] = Fire;
+        Affinities[1] = Ice;
+        Affinities[2] = Electric;
+        Affinities[3] = Wind;
+        Affinities[4] = Light;
+        Affinities[5] = Dark;
     }
     // public static String getName() {return Name;}; //public static void setName(String Name) {Enemy.Name = Name;}
     // public static String getArcana() {return Arcana;}; //public static void setArcana(String Arcana) {Enemy.Arcana = Arcana;}
@@ -68,7 +68,7 @@ public abstract class Enemy {
     // public static int[] getAffinities() {return Affinities;}; //public static void SetAffinitiea
 
     public String AffinityStr(){
-        String[] affs = {"Physical", "Fire", "Ice", "Electric", "Wind", "Light", "Dark"};
+        String[] affs = {"Fire", "Ice", "Electric", "Wind", "Light", "Dark"};
         String s = "";
         for(int i = 0; i < Affinities.length; i++){
             if(Affinities[i] == weak){

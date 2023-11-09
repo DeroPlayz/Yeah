@@ -1,4 +1,4 @@
-package src.Enemies;
+package src.Actor.Enemies;
 
 public class Pixie extends Enemy {
 

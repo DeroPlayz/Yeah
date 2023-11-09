@@ -1,8 +1,11 @@
-package src;
+package src.Actor;
 
 import java.io.Serializable;
 
-public class Player implements Serializable{
+import src.Actor.Enemies.Enemy;
+import src.Elements.Skill;
+
+public class Player extends Actor implements Serializable{
     public /*static*/ String Name = "Dummy";
     public /*static*/ String Subject = "They";
     public /*static*/ String Object = "They";
@@ -52,6 +55,15 @@ public class Player implements Serializable{
         this.Agility = Agility;
         this.Affinities = Affinities;
         this.statPoints = statPoints;
+    }
+
+    public static void hit(Enemy e, Skill s){
+        int mult = (int) Affinities[s.ID()];
+        int dmg = (s.Strength() * Magic) * mult;
+        if(SP > s.Cost()){
+            SP -= s.Cost();
+            e.HP -= dmg;
+        }
     }
 
     public String toString(){

@@ -2,6 +2,10 @@ package src.Elements;
 
 import static src.Elements.ElemList.*;
 
+import src.Actor.Actor;
+import src.Actor.Enemies.Enemy;
+import src.Actor.Player;
+
 public class Skill {
     //Actual Properties
     private String Name;
@@ -9,6 +13,7 @@ public class Skill {
     private int Strength;
     private int HitType;
     private int Targets;
+    private int SPCost;
     
     //Strength Levels
     public static final int Weak = 3;
@@ -30,7 +35,7 @@ public class Skill {
     public Skill(String Name, Element Element, int Strength, int HitType){
         this.Name = Name;
         this.Element = Element;
-        this.Strength = Strength;
+        this.SPCost = this.Strength = Strength;
         this.HitType = HitType;
         this.Targets = Enemy;
     }
@@ -38,7 +43,7 @@ public class Skill {
     public Skill(String Name, Element Element, int Strength, int HitType, int Targets){
         this.Name = Name;
         this.Element = Element;
-        this.Strength = Strength;
+        this.SPCost = this.Strength = Strength;
         this.HitType = HitType;
         this.Targets = Targets;
     }
@@ -49,6 +54,29 @@ public class Skill {
 
     public Element Element(){
         return Element;
+    }
+
+    public int ID(){
+        int id = 0;
+        if(Element == Fire){
+            id = 0;
+        }
+        if(Element == Ice){
+            id = 1;
+        }
+        if(Element == Electric){
+            id = 2;
+        }
+        if(Element == Wind){
+            id = 3;
+        }
+        if(Element == Light){
+            id = 4;
+        }
+        if(Element == Dark){
+            id = 5;
+        }
+        return id;
     }
 
     public int Strength(){
@@ -63,8 +91,9 @@ public class Skill {
         return Targets;
     }
 
-    //Physical Skills
-    public static Skill Bash = new Skill("Placeholder so java doesn't remind me about the unused phys import", Physical, Weak, Single);
+    public int Cost(){
+        return SPCost;
+    }
 
     public static Skill Agi = new Skill("Agi", Fire, Weak, Single);
     public static Skill Agilao = new Skill("Agilao", Fire, Medium, Single);
@@ -138,4 +167,5 @@ public class Skill {
     public static Skill Media = new Skill("Media", Recovery, Weak, Multi);
     public static Skill Mediarama = new Skill("Mediarama", Recovery, Medium, Multi);
     public static Skill Mediarahan = new Skill("Mediarahan", Recovery, Heavy, Multi);
+    
 }

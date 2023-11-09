@@ -1,9 +1,9 @@
-package src.Enemies;
+package src.Actor.Enemies;
 
 public class AI {
     public AI(Arcana Arcana){
         if(Arcana == Arcana.Fool){
-
+            
         }
         if(Arcana == Arcana.Fool){
             
